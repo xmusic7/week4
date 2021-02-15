@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Guess a number</title>
+</head>
+<body>
+    <h1>Guess a number</h1>
+    <h2>Enter the number</h2>
+    <input type="number" name="number" id="userguess">
+    <button onclick="buttonClicked()">Click me!</button>
+</body>
+<script type="text/javascript">
+    var random = Math.ceil(Math.random() * 100);
+    var chances = 5;
+    function buttonClicked(){
+      
+        // Retrived the value from the input with id userguess
+        var userguess = document.getElementById("userguess").value
+        
+        if (userguess > random){
+            alert("Number to high")
+            chances--
+        }
+        else if (userguess < random){
+            alert("Number to low")
+            chances--
+        }
+        else{
+            alert("you win")
+        }
+
+        if (chances == 0){
+            alert("You are out of chances. The number is "+random)
+        }
+    }
+
+</script>
+</html>
