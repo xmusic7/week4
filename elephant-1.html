@@ -8,7 +8,6 @@
 			color: #707070;
 			margin: 0;
 		}
-		
 		h1{
 			font-size: 3rem;
 			color: #212614;			
@@ -29,19 +28,10 @@
 			margin: 0px auto;
 			width: 95%;
 		}
-		.columns-top {
+		.columns {
 			display: flex;
 			flex-shrink: 5;
-			
-		}
-		.columns-btm {
-			display: flex;
-			flex-shrink: 5;
-			
-		}
-		.empty{
-			width: 100%;
-			height:1em;
+			margin: 1em 0em;
 		}
 		.col-1{
 			width: 25%;
@@ -60,17 +50,22 @@
 			padding: .5em;
 			color: #fff;
 		}
+/*Setting untuk PC and above */
+		@media (max-width: 600px){
+			.columns {
+				flex-direction: column;
+			}
+			.col-1, .col-2, .col-3 {
+				width: 100%;
+			}
+		}
 	</style>
 </head>
 <body>
 <div class="container">
 	<h1>Let's start <span>getting a little</span> more fancy!</h1>
-	<img src="ele.1.jpg">
-	<div class="empty">
-				</div>
+	<img src="elephant.jpg">
 	<div class="columns">
-
-		<div class="columns-top">
 		<div class="col-1">
 			<h2>Dolor sit</h2>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -87,13 +82,10 @@
 			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-		   
-		   
 		    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 		    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 		    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 		    consequat. Duis aute irure dolor in</p>
-			
 		</div>
 		<div class="col-bg col-1">
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -103,11 +95,7 @@
 			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat .</p>
 		</div>
 	</div>
-			<div class="empty">
-				</div>
-			
-
-	<div class="columns-btm">
+	<div class="columns">
 		<div class="col-3">
 			<h2>Descerunt mollit anime id est laborum</h2>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -122,9 +110,6 @@
 			tempor incididunt ut labore et dolore magna aliqua. Ut.</p>
 		</div>	
 	</div>
-	<div class="empty">
-				</div>
 	</div>
-</div>
 </body>
 </html>
